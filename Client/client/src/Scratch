@@ -1,0 +1,180 @@
+{listOfItems.map((item) => {
+          return (
+            <div>
+              <h1>Name: {item.name}</h1>
+              <h1>Description: {item.description}</h1>
+            </div>
+          )
+        })};
+
+
+
+
+
+
+
+
+
+
+
+        <input
+        type = "text"
+        placeholder="Image URL..."
+        onChange={(event) => {
+          setImage(event.target.value)
+        }}
+      />
+
+
+
+
+
+
+
+
+
+
+
+      <img src = {item.imageURL}
+                  width = "200"
+                /> 
+
+
+
+                
+
+
+
+
+                <div>
+                  <label for="itemColor">Item Color: </label>
+                  <input
+                    type="color"
+                    id="itemColor"
+                    name="itemColor"
+    
+                    onChange={(e) => setItemColor(e.target.value)}></input>
+                </div>
+
+  input{
+    width: 50%;
+    display: block;
+    margin: 15px auto;
+    }
+
+
+
+    {/*<form name="createItemForm">
+      <fieldset>
+        <legend>Create an Item</legend>
+        <div>
+          <label>Item Name: </label>
+          <input
+            type="text"
+            placeholder="Name..."
+            onChange={(event) => {
+              setName(event.target.value)
+            }} />
+        </div>
+        <div>
+          <label>Description (category): </label>
+          <input
+            type="text"
+            placeholder="Description..."
+            onChange={(event) => {
+              setDescription(event.target.value)
+            }}
+          />
+        </div>
+        <div>
+          <label>Image URL: </label>
+          <input
+            type="text"
+            id="imageURLField"
+            placeholder="Image URL..."
+            onChange={(event) => {
+              setImage(event.target.value)
+            }}
+          />
+        </div>
+
+        <label>Condition</label>
+        <div>
+          <input
+            type="radio"
+            id="newitem"
+            name="condition"
+            value="newItem"
+            onChange={() => setItemCondition("New")}
+          />
+          <label for="newItem">New</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            id="usedLikeNewItem"
+            name="condition"
+            value="usedLikeNewItem"
+            onChange={() => setItemCondition("Used-Like New")}
+          />
+          <label for="usedLikeNewItem">Used-Like New</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            id="usedItem"
+            name="condition"
+            value="usedItem"
+            onChange={() => setItemCondition("Used")}
+          />
+          <label for="usedItem">Used</label>
+
+        </div>
+
+        <div>
+          <label htmlFor="colorList">Item Color: </label>
+          <select id="colorList" onChange={handleColorChange} value={itemColor}>
+            <option value="Red">Red</option>
+            <option value="Blue">Blue</option>
+            <option value="Green">Green</option>
+            <option value="Yellow">Yellow</option>
+            <option value="Black">Black</option>
+            <option value="Gray">Gray</option>
+            <option value="Pink">Prink</option>
+            <option value="Brown">Brown</option>
+            <option value="Purple">Purple</option>
+            <option value="Orange">Orange</option>
+            <option value="White">White</option>
+            <option value="Multicolored">Multicolored</option>
+          </select>
+        </div>
+
+
+        <button id="submitCreateItem" onClick={createItem}> Create Item </button>
+
+      </fieldset>
+
+
+          </form>*/}
+
+
+          {/*<tbody>
+            {listOfItems.map((item) => (
+              <tr key={item._id}>
+                <td>{item._id}</td>
+                <td>{item.name}</td>
+                <td>Type: {item.description}
+                  <p>Color: {item.itemColor}</p>
+                  <p>Condition: {item.itemCondition}</p>
+                </td>
+                <img src={item.imageURL} alt={item.imageURL}
+                  width="200" />
+                <td>
+                  <button id="updateButton" onClick={() => { document.querySelector('.bg-modal').style.display = 'flex' }}> Update </button>
+                  <button onClick={() => deleteItem(item._id)}> Delete </button>
+            </td>
+
+              </tr>
+
+            ))}
+          </tbody>*/}
