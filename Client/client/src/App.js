@@ -132,11 +132,27 @@ function App() {
   };
 
   const sortedItems = [...filteredItems];
-  if (sortBy === "id") {
-    sortedItems.sort((a, b) => a._id.localeCompare(b._id));
-  } else if (sortBy === "name") {
-    sortedItems.sort((a, b) => a.name.localeCompare(b.name));
-  }
+if (sortBy === "id") {
+  sortedItems.sort((a, b) => {
+    if (a._id && b._id) {
+      return a._id.localeCompare(b._id);
+    }
+    return 0; 
+  });
+} else if (sortBy === "name") {
+  sortedItems.sort((a, b) => {
+    if (a.name && b.name) {
+      return a.name.localeCompare(b.name);
+    }
+    return 0; 
+  });
+}
+
+
+
+
+
+
 
   const resetCreateItemForm = () => {
     setName("");
